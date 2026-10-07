@@ -3,141 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Practica 8 </title>
+    <title>Practica 8</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: "Comic Sans MS", "Comic Sans";
-            border-radius: 0 !important;
-        }
-        body {
-            background-color: #f4f6f8;
-            color: #222222;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #0056D2;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 26px;
-            letter-spacing: 0.5px;
-        }
-        header p {
-            font-size: 13px;
-            opacity: 0.9;
-            margin-top: 4px;
-        }
-        nav {
-            background-color: #ffffff;
-            padding: 12px;
-            border-bottom: 1px solid #dddddd;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #0056D2;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            background-color: #f4f6f8;
-            padding: 40px 20px;
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .form-container {
-            width: 100%;
-            max-width: 400px;
-            background-color: #ffffff;
-            padding: 30px;
-            border: 1px solid #cccccc;
-        }
-        h2 {
-            color: #0056D2;
-            border-bottom: 2px solid #0056D2;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            font-size: 18px;
-            text-align: center;
-        }
-        .campo {
-            margin-bottom: 16px;
-        }
-        .campo label {
-            display: block;
-            font-weight: bold;
-            font-size: 13px;
-            margin-bottom: 6px;
-            color: #333333;
-        }
-        .campo input[type="text"],
-        .campo input[type="email"],
-        .campo select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #cccccc;
-            font-size: 14px;
-            background-color: #ffffff;
-        }
-        .opciones-radio {
-            display: flex;
-            gap: 20px;
-            margin-top: 6px;
-            font-size: 13px;
-        }
-        .opciones-radio label {
-            font-weight: normal;
-            cursor: pointer;
-        }
-        button {
-            background-color: #0056D2;
-            color: #ffffff;
-            border: none;
-            padding: 12px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #003e99;
-        }
-        footer {
-            background-color: #ffffff;
-            border-top: 1px solid #dddddd;
-            padding: 20px;
-            text-align: center;
-            font-size: 12px;
-            color: #555555;
-            line-height: 1.5;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Comic Sans MS", cursive; border-radius: 0 !important; }
+        body { background: #f4f6f8; color: #222; display: flex; flex-direction: column; min-height: 100vh; }
+        header, button { background: #0056D2; color: #fff; text-align: center; }
+        header, main, footer { padding: 20px; }
+        nav, footer, .form-container { background: #fff; border: solid #ddd; border-width: 1px 0; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; padding: 10px; }
+        nav a, h2 { color: #0056D2; font-weight: bold; text-decoration: none; }
+        main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .banner-imagen img { display: block; margin: 0 auto 15px; max-width: 100%; width: 400px; }
+        .form-container { width: 100%; max-width: 400px; padding: 20px; border: 1px solid #ccc; }
+        .campo { margin-bottom: 12px; }
+        .campo label { display: block; font-weight: bold; font-size: 13px; margin-bottom: 4px; }
+        .campo input { width: 100%; padding: 8px; border: 1px solid #ccc; }
+        .acciones-form { display: flex; gap: 10px; margin-top: 10px; }
+        button { flex: 1; border: none; padding: 10px; cursor: pointer; font-weight: bold; }
+        .btn-reset { background: #dc3545; }
+        footer { text-align: center; font-size: 12px; color: #555; }
     </style>
 </head>
 <body>
     <header>
         <h1>Coursera</h1>
-        <p>Comience, cambie o avance en su carrera</p>
+        <p style="font-size: 13px; opacity: 0.9;">Comience, cambie o avance en su carrera</p>
     </header>
-
     <nav>
         <ul>
             <li><a href="#">Inicio</a></li>
@@ -146,42 +37,32 @@
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
-    <div class="banner-imagen">
-        <img src="https://storage.ghost.io/c/12/7b/127b828b-bdc2-4972-9cf2-de857df9c324/content/images/size/w2000/format/webp/2024/11/Coursera-Review.webp" 
-        alt="Coursera Review" 
-        width="500" 
-        height="300" 
-        style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
-    </div>
     <main>
+        <div class="banner-imagen">
+            <img src="https://storage.ghost.io/c/12/7b/127b828b-bdc2-4972-9cf2-de857df9c324/content/images/size/w2000/format/webp/2024/11/Coursera-Review.webp" alt="Coursera Review">
+        </div>
         <div class="form-container">
-            <h2>Formulario de Inscripción</h2>
-            <form action="" method="post">
+            <h2 style="border-bottom: 2px solid #0056D2; padding-bottom: 5px; margin-bottom: 15px; text-align: center; font-size: 18px;">Formulario de Inscripción</h2>
+            <form onsubmit="return false;">
                 <div class="campo">
                     <label for="nombre">Ingresa tu nombre:</label>
                     <input type="text" id="nombre" name="nombre">
                 </div>
-
                 <div class="campo">
                     <label for="correo">Ingresa tu correo:</label>
                     <input type="email" id="correo" name="correo">
                 </div>
                 <div class="acciones-form">
-                    <button type="submit" class="btn-submit">
-                        Inscribirse <i class="fa-regular fa-paper-plane"></i>
-                    </button>
-                    <button type="reset" class="btn-reset">
-                        Borrar <i class="fa fa-trash"></i>
-                    </button>
+                    <button type="button">Inscribirse</button>
+                    <button type="button" class="btn-reset">Borrar</button>
                 </div>
             </form>
         </div>
     </main>
     <footer>
-        <p> Construye Aplicaciones Web</p>
-        <p> Esquivel Cano Nataly Scarlett</p>
-        <p> 24308051280533</p>
-        <p> 5-I</p>
+        <p>Construye Aplicaciones Web</p>
+        <p>Esquivel Cano Nataly Scarlett</p>
+        <p>24308051280533 | 5-I</p>
     </footer>
 </body>
 </html>
